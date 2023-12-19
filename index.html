@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>❤</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="htmleaf-container">
+      <div class="wrapper">
+        <div class="container">
+          <h1 id="h"></h1>
+          <form class="form">
+            <!-- <input id="username" type="text" placeholder="姓名" />
+            <input id="passwd" type="password" placeholder="密码" />
+            <button type="submit" id="login-button" onclick="pd()">进入</button>
+            <button type="reset" id="login-button">重置</button> -->
+            <!-- .wrapper.form-success .container h1 -->
+
+            <input type="text" placeholder="请输入用户名..." id="username" />
+            <input type="password" placeholder="请输入密码..." id="passwd" />
+            <input type="button" value="登录" onclick="login()" />
+            <input type="reset" value="清除" />
+          </form>
+        </div>
+
+        <ul class="bg-bubbles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function login() {
+        var accountAll = [
+          {
+            // 存储账户json数据的数组
+            username: "梅畅",
+            passwd: "123456"
+          }
+        ];
+
+        let username = document.getElementById("username").value;
+        let passwd = document.getElementById("passwd").value;
+        if (passwd === "meichang") {
+          window.localStorage.setItem("name", username);
+          window.open("var.html");
+        } else {
+          alert("笨蛋，你输错密码啦");
+        }
+      }
+    </script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/verification.js"></script>
+  </body>
+</html>
