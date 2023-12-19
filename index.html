@@ -53,7 +53,8 @@
         let passwd = document.getElementById("passwd").value;
         if (passwd === "meichang") {
           window.localStorage.setItem("name", username);
-          window.open("var.html");
+          // window.open("var.html");
+          window.location.href = "var.html";
         } else {
           alert("笨蛋，你输错密码啦");
         }
